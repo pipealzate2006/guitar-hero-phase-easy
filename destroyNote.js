@@ -1,3 +1,3 @@
-export function destroyNote(note, notes) {
+export function destroyNote(note) {
   note.destroy();
 }

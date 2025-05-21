@@ -149,7 +149,7 @@ function update() {
         note.texture.key === "note-a"
       ) {
         this.noteSound.a.play();
-        destroyNote(note, notes);
+        destroyNote(note);
         addScore();
         didHitNote = true;
       } else if (
@@ -158,7 +158,7 @@ function update() {
         note.texture.key === "note-s"
       ) {
         this.noteSound.s.play();
-        destroyNote(note, notes);
+        destroyNote(note);
         addScore();
         didHitNote = true;
       } else if (
@@ -167,7 +167,7 @@ function update() {
         note.texture.key === "note-d"
       ) {
         this.noteSound.a.play();
-        destroyNote(note, notes);
+        destroyNote(note);
         addScore();
         didHitNote = true;
       } else if (
@@ -176,14 +176,14 @@ function update() {
         note.texture.key === "note-f"
       ) {
         this.noteSound.s.play();
-        destroyNote(note, notes);
+        destroyNote(note);
         addScore();
         didHitNote = true;
       }
     }
 
     if (note.y > this.cameras.main.height + 50) {
-      destroyNote(note, notes);
+      destroyNote(note);
       removeScore(this, notes);
     }
   });
