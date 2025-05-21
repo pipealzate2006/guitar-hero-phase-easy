@@ -17,10 +17,8 @@ export function increaseDifficulty(notes, scene) {
 
     gameState.delayTimeCreateNote = 1500 - 80 * levelsPassed;
 
-    console.log("Delay time", gameState.delayTimeCreateNote);
     if (gameState.delayTimeCreateNote < 600) {
       gameState.delayTimeCreateNote = 600;
-      console.log("Delay time minimo", gameState.delayTimeCreateNote);
     }
 
     notes.getChildren().forEach((note) => {
@@ -42,7 +40,5 @@ export function increaseDifficulty(notes, scene) {
       callbackScope: scene,
       loop: true,
     });
-
-    console.log("Aumenta velocidad a", gameState.currentNoteSpeed);
   }
 }

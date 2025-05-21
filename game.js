@@ -135,7 +135,6 @@ function update() {
   // pause game
   pauseGame(isEsc, this);
 
-
   let didHitNote = false;
 
   //check if the note is in the hit zone
@@ -144,7 +143,6 @@ function update() {
       note.y > hitZoneY && note.y < hitZoneY + hitZoneHeight / 2;
 
     if (inHitZone) {
-      console.log("En hit zone");
       if (
         isA &&
         Math.abs(note.x - lanePositionsX[0]) < 30 &&
@@ -187,8 +185,6 @@ function update() {
     if (note.y > this.cameras.main.height + 50) {
       destroyNote(note, notes);
       removeScore(this, notes);
-      gameState.failedNotes += 1;
-      console.log("Nota perdida", gameState.failedNotes);
     }
   });
 
@@ -199,8 +195,7 @@ function update() {
     (isD && !didHitNote) ||
     (isF && !didHitNote)
   ) {
-    console.log("A incorrecto");
-    removeScore(this);
+    removeScore(this, notes);
   }
   didHitNote = false;
 

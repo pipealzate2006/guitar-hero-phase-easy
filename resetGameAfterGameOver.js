@@ -7,7 +7,6 @@ export function resetGameAfterGameOver(isEnter, scene) {
       scene.gameOverModal.destroy();
       scene.noteEvent.remove();
       scene.scene.restart();
-      gameState.failedNotes = 0;
       gameState.score = 0;
       gameState.hasScored = false;
       gameState.isModalGameOverOpen = false;

@@ -9,7 +9,6 @@ export function pauseGame(isEsc, scene) {
       Object.values(scene.noteSound).forEach((sound) => {
         sound.pause();
       });
-      console.log(gameState.timesEscIsPressed);
       scene.pauseModal = scene.add.image(480, 270, "pause-modal").setScale(0.7);
     } else if (gameState.timesEscIsPressed === 2) {
       scene.noteEvent.paused = false;

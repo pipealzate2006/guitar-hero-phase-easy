@@ -35,7 +35,6 @@ export function removeScore(scene, notes) {
   ) {
     gameState.timesEscIsPressed = 3;
     gameState.isModalGameOverOpen = true;
-    console.log("Game Over");
     Object.values(scene.noteSound).forEach((sound) => {
       if (sound) {
         sound.stop();

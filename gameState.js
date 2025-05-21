@@ -10,8 +10,6 @@ export const gameState = {
   timesEscIsPressed: 0,
   isModalGameOverOpen: false,
 
-  failedNotes: 0,
-
   currentNoteSpeed: noteSpeed,
 
   lastSpeedUpdateScore: 0,
