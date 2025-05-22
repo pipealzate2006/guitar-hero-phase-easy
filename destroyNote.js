@@ -1,3 +1,7 @@
 export function destroyNote(note) {
-  note.destroy();
+  try {
+    note.destroy();
+  } catch (error) {
+    console.log(error);
+  }
 }
